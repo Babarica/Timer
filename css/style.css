@@ -1,0 +1,279 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  font-family: 'Russo One', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0B0C10), color-stop(99.99%, #202833), to(rgba(32, 40, 51, 0)));
+  background: linear-gradient(180deg, #0B0C10 0%, #202833 99.99%, rgba(32, 40, 51, 0) 100%);
+  color: transparent;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-text-stroke: 3px #66FCF1;
+  font-size: 144px;
+  line-height: 174px;
+  font-family: Russo One;
+  position: relative;
+  max-width: 560px;
+}
+
+.timer::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 600px;
+  height: 5px;
+  background-color: #66FCF1;
+  bottom: 0;
+  left: 13px;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #66FCF1;
+  margin-top: 149px;
+  font-family: Rubik;
+  max-width: 700px;
+  margin-left: 84px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button {
+  position: relative;
+  display: block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: #66FCF1;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.button span {
+  position: absolute;
+  display: block;
+}
+
+.button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#66FCF1));
+  background: linear-gradient(90deg, transparent, #66FCF1);
+  -webkit-animation: animate1 1s linear infinite;
+          animation: animate1 1s linear infinite;
+}
+
+.button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#66FCF1));
+  background: linear-gradient(180deg, transparent, #66FCF1);
+  -webkit-animation: animate2 1s linear infinite;
+          animation: animate2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.button span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#66FCF1));
+  background: linear-gradient(2700deg, transparent, #66FCF1);
+  -webkit-animation: animate3 1s linear infinite;
+          animation: animate3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#66FCF1));
+  background: linear-gradient(360deg, transparent, #66FCF1);
+  -webkit-animation: animate4 1s linear infinite;
+          animation: animate4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.button:hover {
+  background: #66FCF1;
+  color: #0B0C10;
+  -webkit-box-shadow: 0 0 5px #66FCF1, 0 0 25px #66FCF1, 0 0 50px #66FCF1, 0 0 200px #66FCF1;
+          box-shadow: 0 0 5px #66FCF1, 0 0 25px #66FCF1, 0 0 50px #66FCF1, 0 0 200px #66FCF1;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0001);
+}
+
+.button:nth-child(3) {
+  margin-right: 0;
+}
+
+.results {
+  padding-top: 40px;
+  max-height: 20px;
+  margin-left: 86px;
+}
+
+.results div {
+  text-align: center;
+  color: #66FCF1;
+}
+
+@-webkit-keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .timer {
+    max-width: 400px;
+    font-size: 100px;
+    line-height: 140px;
+  }
+  .timer::after {
+    width: 25rem;
+  }
+  .results {
+    margin-left: 0;
+  }
+  .buttons {
+    margin-left: 0px;
+    max-width: 500px;
+  }
+  .button {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 515px) {
+  .timer {
+    max-width: 100%;
+    font-size: 80px;
+    line-height: 100px;
+  }
+  .timer::after {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 200px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .timer {
+    font-size: 60px;
+  }
+  .timer::after {
+    width: 14rem;
+  }
+}
